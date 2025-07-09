@@ -1,0 +1,87 @@
+* {
+  font-family: sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 30ch;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  padding: 1rem 0;
+  color: #2d5a3d;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #2d5a3d;
+}
+
+.plant {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  background: #f9f9f9;
+}
+
+.plant figure {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h3 {
+  color: #2d5a3d;
+}
+
+.plants ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
+  gap: 1ch;
+  list-style: none;
+}
+
+.cart-item {
+  padding: 0.25rem;
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-quantity {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+button {
+  padding: 0.25rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .plants ul {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
